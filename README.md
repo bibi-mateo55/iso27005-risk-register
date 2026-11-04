@@ -2,11 +2,11 @@
 
 A practical information-security **risk register** built with the **ISO/IEC 27005** methodology for a fictional organisation. This is a portfolio project to demonstrate GRC skills: identifying threats and vulnerabilities, scoring risk, and recommending treatments mapped to controls.
 
-> ⚠️ **CloudNova is fictional and all data is invented** for learning purposes. No real company or data is represented.
+> **CloudNova is fictional and all data is invented** for learning purposes. No real company or data is represented.
 
 ---
 
-## 🏢 Context
+## Context
 
 **CloudNova** is a European SME (~45 employees) offering a **B2B project-management SaaS platform**, hosted on AWS in a multi-tenant architecture. It processes customers' personal data and documents, which makes it subject to **GDPR** and in scope of **NIS2** as a digital service provider.
 
@@ -14,7 +14,7 @@ A practical information-security **risk register** built with the **ISO/IEC 2700
 
 ---
 
-## 📐 Methodology (ISO/IEC 27005)
+## Methodology (ISO/IEC 27005)
 
 Each risk is scored as **Risk level = Probability × Impact**, both on a 1–5 scale.
 
@@ -29,7 +29,7 @@ The full scales (probability and impact definitions) and a risk heat-map are in 
 
 ---
 
-## 📋 Risk register
+##  Risk register
 
 | ID | Threat | Vulnerability | Asset | P | I | Level | Class | Treatment | Proposed control |
 |---|---|---|---|:-:|:-:|:-:|---|---|---|
@@ -52,7 +52,7 @@ The full scales (probability and impact definitions) and a risk heat-map are in 
 
 ---
 
-## 🎯 Top 3 priorities
+## Top 3 priorities
 
 1. **R-01 — Enforce MFA and privileged access management (score 20, Critical).** A single admin credential protects the entire AWS estate. Enforcing MFA on all privileged accounts and adding a PAM solution is the highest-impact, lowest-cost action and should happen first.
 2. **R-02 — Secure cloud storage and add configuration scanning (score 15, High).** A misconfigured bucket is one of the most common causes of mass data breaches. Enforce encryption and restrictive policies, and deploy continuous configuration scanning (CSPM) to catch drift automatically.
@@ -60,15 +60,11 @@ The full scales (probability and impact definitions) and a risk heat-map are in 
 
 ---
 
-## 📌 Assumptions
+## Assumptions
 
 - CloudNova is pre-certification: no ISO 27001 ISMS or formal risk process exists yet (which is why this register is the starting point).
 - Probability reflects a small company with limited security maturity and a cloud-native stack.
 - Impact is rated against the business: customer-data confidentiality and service availability are the crown jewels.
 - The register is a point-in-time assessment; it should be reviewed at least annually and after any major change.
 
----
 
-## 🔗 Related
-
-- Companion project: **NIS2 / ISO 27001 gap analysis** for the same organisation *(coming soon)*.
